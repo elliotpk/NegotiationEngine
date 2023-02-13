@@ -159,7 +159,7 @@ def edit_room(room_id):
 
 # GET request to this route has to include room_id for the room you want to join but no aditional parameters are needed
 
-@app.route('/rooms/<room_id>/join', methods=['POST'])
+@app.route('/rooms/<room_id>/join', methods=['GET'])
 #@login_required
 def join_room(room_id):
     room = get_room(room_id)
@@ -256,8 +256,8 @@ def winner(room_id):
         
         if(is_room_admin(room_id,user)==1):
             
-            if (closing_time)>datetime.now(): #Auction hasnt ended
-                    return{"message":"The specified auction hasnt ended"},400
+            #if (closing_time)>datetime.now(): #Auction hasnt ended
+                    #return{"message":"The specified auction hasnt ended"},400
             if get_hbidder(room_id)=='': ## This would mean the auction doesnt have a winner yet
                 winner=request.form.get("winner") #Should be username
                 wi=json.loads(get_hb(room_id,winner)) ## Get hb should be changed in case the auction is descending
