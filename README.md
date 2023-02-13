@@ -1,3 +1,5 @@
+This fork was made to make minor changes and tweaks to be able to run the project for "Simulation environment for demand-supply matching" - https://github.com/elliotpk/d0020e. The notable changes are removing time checks for ending auctions and changing request type to 'GET' for the join_room method
+
 # Negotiation Engine
 ## First Iteration of REST API for the Negotation Engine for Demand supply matching system
 ### by Eric Chiquito
